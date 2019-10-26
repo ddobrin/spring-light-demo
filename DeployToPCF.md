@@ -61,6 +61,8 @@ cf logs spring-light
 ```
 
 #### 5. Check the health of the app:
+Check the status of the app with: ```cf app spring-light```
+
 ```
 Showing health and status for app spring-light in org dan.dobrin-org / space development as dan.dobrin@gmail.com...
 
