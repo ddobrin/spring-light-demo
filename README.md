@@ -1,4 +1,6 @@
-## Deploy to PCF
+## Deploy Application to Pivotal Cloud Foundry 
+
+This document will guide a developer to deploying the demo app to the managed instance of PCF
 
 ### Deploy a Spring microservice up and running on the Pivotal Platform.
 To save time, we will be using Pivotal Web Services, an instance of Pivotal Platform hosted by Pivotal
@@ -21,10 +23,10 @@ cf help
 
 #### Deploy the sample app
 ```
-git clone git@github.com:networknt/light-example-4j.git
+git clone git@github.com:ddobrin/docs.git
 
 Let's use the light-to-spring migration microservice
-cd light-example-4j/springboot/servlet
+cd docs
 
 To build a clean copy, let's run:
 ./mvnw clean install spring-boot:run
@@ -42,7 +44,10 @@ curl -H "Authorization: Bearer eyJraWQiOiIxMDAiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJ1
 http://cli.cloudfoundry.org/en-US/cf/
 
 #### 1. Log in to PWS:
-```cf login -a https://api.run.pivotal.io```
+```cf login -a https://api.run.pivotal.io -u dan.dobrin@gmail.com```
+
+Target a specific Org and Space
+```cf target -o dan.dobrin-org -s development```
 
 #### 2. List the apps running in the org:
 ```cf apps```
@@ -140,6 +145,6 @@ Scale down disk space - vertically:
 cf scale spring-light -k 512M
 ```
 
-#### 9. Logout out PCF
+#### 9. Logout of the application
 
 ```cf logout```
