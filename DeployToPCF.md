@@ -21,10 +21,10 @@ cf help
 
 #### Deploy the sample app
 ```
-git clone git@github.com:networknt/light-example-4j.git
+git clone git@github.com:ddobrin/docs.git
 
 Let's use the light-to-spring migration microservice
-cd light-example-4j/springboot/servlet
+cd docs
 
 To build a clean copy, let's run:
 ./mvnw clean install spring-boot:run
